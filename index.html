@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body style="background-color: black;" onload="time_updater(); setInterval('time_updater()',1000)">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <h4>ENQUIRY</h4>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="http://www.indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en"><b>PNR
+                            Enquiry</b></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link"
+                        href="http://www.indianrail.gov.in/enquiry/TBIS/TrainBetweenImportantStations.html?locale=en"><b>Train
+                            Between Station</b></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link"
+                        href="http://www.indianrail.gov.in/enquiry/SEAT/SeatAvailability.html?locale=en"><b>Seat
+                            Availability</b></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link"
+                        href="http://www.indianrail.gov.in/enquiry/FARE/FareEnquiry.html?locale=en"><b>Fare
+                            Enquiry</b></a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><b> Train Scheduled</b></a>
+                </li>
+
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light mx-2 my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+    
+        <div class="row">
+            <div class="title">
+                <h1 style="color: white;">INDIAN RAILWAYS ENQUIRY</h3>
+            </div>
+            <div>
+                <img class="logo" src="../images/logo2.jpg">
+            </div>
+            <div>
+                <img class="loin" src="../images/loin2.jpg">
+            </div>
+
+            <div class="row">
+                <marquee class="marquee" direction="left">
+                    <h4 style="color: white;">Welcome to Indian Ralways page. Please help Indian railways and government
+                        of
+                        India in moving towards a digitalized and cashless economy, please scroll below for querry.</h4>
+                </marquee>
+            </div>
+
+            <div class="slides ">
+                <img class="mySlides w3-animate-fading" src="../images/train1.jpg">
+                <img class="mySlides w3-animate-fading" src="../images/train2.jpg">
+                <img class="mySlides w3-animate-fading" src="../images/train3.jpg">
+                <img class="mySlides w3-animate-fading" src="../images/train4.jpg">
+                <img class="mySlides w3-animate-fading" src="../images/train5.jpg">
+            </div>
+        </div>
+
+        <div class=" schedule col-md-12">
+            <h2 class="text-center " style="padding:10px;">Train Schedule</h2>
+        </div>
+
+        <div class="card" style="background-color:black;">
+            <div class="date" id="date" style="color: white;background-color:black; text-align:center"></div>
+            <div class="time" id="time" style="color: white; background-color:black;text-align:center"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <marquee class="marquee1" direction="left">
+                    <h4 style="color: white;">Please enter the digits of Train Number.
+                        e.g. To get the train schedule for Tejas Express i.e. Train No. 02435 --> Enter 02435 and click
+                        on
+                        get
+                        schedule.
+                    </h4>
+                </marquee>
+            </div>
+        </div>
+
+        <div class="head col-md-12 form-group">
+            <div class="col-md-6 text-center label_text" align="center">
+                <label>
+                    <h4 style="color: white;">Enter Train Number</h4>
+                </label>
+            </div>
+            <input class="input_train_no form-control_custom input_text_custom uppercase" type="text" id="trainNo"
+                placeholder="Enter Train Number" required>
+        </div>
+
+        <div class="calender col-md-6 text-center label_text" align="center">
+            <div>
+                <label>
+                    <h4 style="color: white;">Select The Date</h4>
+                </label>
+            </div>
+            <input class="input_date" type="date" id="fetch_date">
+        </div>
+
+        <a href="#" class="btn btn-primary btn-lg active" role="button" id="btn" aria-pressed="true"><b>Get
+  Schedule</b></a>
+
+        <div class="col-md-12 form-group text-center my-3">
+            <h6 style="color: white; margin-left:5%">*Train Schedule is shown only for reserved trains defined in
+                the PRS system.
+            </h6>
+        </div>
+
+        <div id="container" class="row container-fluid"></div>
+
+        <div>
+            <img class="img" src="../images/train6.jpg">
+        </div>
+
+        <div class="row">
+
+            <a href="https://www.irctc.co.in/eticketing/contact.jsf"><img class="footer1" src="../images/call.1.jpg"
+                    alt="contact"></a>
+            <a href="https://www.facebook.com/"><img class="footer2" src="../images/fb.1.jpg" alt="facebook"></a>
+            <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img
+                    class="footer3" src="../images/twit.1.jpg" alt="twitter"></a>
+            <a href="https://www.instagram.com/"><img class="footer4" src="../images/insta.jpg" alt="insta"></a>
+            <a href="https://mail.google.com/mail/u/0/#"><img class="footer5" src="../images/gmail.jpg" alt="gmail"></a>
+
+        </div>
+
+        <script src="app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+   
+</body>
+
+</html>
