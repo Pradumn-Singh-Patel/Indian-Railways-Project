@@ -128,6 +128,52 @@ color: white;
     margin-top: 7%;    
 } 
 
-/* .container{
-    margin-left: 4%;
-} */
+.side_a,
+.side_b{
+    position: absolute; 
+    backface-visibility: hidden;
+    height: 213px;
+    width: 300px;
+}
+
+.side_a{
+    z-index: 10;
+    
+}
+
+.side_b{
+    transform: rotateY(180deg);
+}
+
+.wrap{
+    margin: 3%;
+    height: 213px;
+    width: 300px;
+    transform-style: preserve-3d;
+    transition: 1.2s;
+}
+.wrap:hover{
+    transform: rotateY(180deg);
+    transition: 1.2s;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card_header{
+    background-color: rgb(18, 87, 236);
+    color: white;
+}
+
+.card_body{
+    background-color: black;
+    color: white;
+}
+
+.arrow{
+    position: absolute;
+    margin-top: 9%;
+    font-size: 150%;
+}
