@@ -64,8 +64,8 @@ document.getElementById('btn').addEventListener('click', () => {
           </ul>
         </div>
       </div>
-    </div> 
-        <p class="arrow" style="color: white;"><b>--></b></p>`
+    </div> `
+        // <p class="arrow" style="color: white;"><b>--></b></p>`
       }
     })
     .catch()
