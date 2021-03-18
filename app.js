@@ -30,7 +30,6 @@ function carousel() {
 
 
 document.getElementById('btn').addEventListener('click', () => {
-  container=''
   let train_no = document.getElementById('train_no').value
   let date = document.getElementById('fetch_date').value
   let required_date = date.replace(/-/g, '')
@@ -40,8 +39,9 @@ document.getElementById('btn').addEventListener('click', () => {
     })
     .then((data) => {
       let n = no_of_station = data.TrainRoute.length
+      container.innerHTML = ''
       for (let i = 0; i < n; i++) {
-        let container= document.getElementById('container')
+        container= document.getElementById('container')
         container.innerHTML +=
           `<div class="wrap text-center col-sm-3">
       <div class="side_a">
@@ -58,14 +58,14 @@ document.getElementById('btn').addEventListener('click', () => {
         <div class="card">
           <ul class="list-group list-group-flush">
           
-            <li class="list-group-item" style="background-color: black; color: white;" ><h5>Day</h5>${data.TrainRoute[i].Day}</li>
+            <li class="list-group-item" style="background-color: black; color: white;" ><h5>Day</h5><b>${data.TrainRoute[i].Day}</li>
             <li class="list-group-item" style="background-color: black; color: white;"><h5>Arrival Time</h5>${data.TrainRoute[i].ScheduleArrival}</li>
             <li class="list-group-item" style="background-color: black; color: white;"><h5>Departure Time</h5>${data.TrainRoute[i].ScheduleDeparture}</li>
           </ul>
         </div>
       </div>
-    </div> `
-        // <p class="arrow" style="color: white;"><b>--></b></p>`
+    </div> 
+        <p class="arrow" style="color: white;"><b>--></b></p>`
       }
     })
     .catch()

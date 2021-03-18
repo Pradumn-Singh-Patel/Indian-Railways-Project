@@ -90,7 +90,7 @@ color: white;
     height: 17%;
     width: 8%;
     margin-left: 90%;
-    margin-top: 2%;
+    margin-top: 3%;
 } 
 
 .footer1{
@@ -138,11 +138,13 @@ color: white;
 
 .side_a{
     z-index: 10;
-    
 }
 
 .side_b{
     transform: rotateY(180deg);
+    margin-left: -6%;
+    border-radius: 8%;
+    
 }
 
 .wrap{
@@ -151,7 +153,10 @@ color: white;
     width: 300px;
     transform-style: preserve-3d;
     transition: 1.2s;
+    border-radius: 8%;
+    box-shadow: 0 4px 8px 0 rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255); 
 }
+
 .wrap:hover{
     transform: rotateY(180deg);
     transition: 1.2s;
@@ -160,20 +165,28 @@ color: white;
 .container{
     display: flex;
     justify-content: space-evenly;
+    margin-left: 167px;
+    margin-right: -15px;
 }
 
 .card_header{
-    background-color: rgb(18, 87, 236);
+    background-color: black;
     color: white;
-}
+    margin-left: -12%;
+    width: 104%;
+} 
 
 .card_body{
     background-color: black;
     color: white;
+    position: absolute;
+    margin-left: -4%;
+    width: 91%;
 }
 
 .arrow{
     position: absolute;
     margin-top: 9%;
     font-size: 150%;
+    margin-left: -1%;
 }
