@@ -139,10 +139,7 @@ color: white;
 }
 
 .side_b{
-    transform: rotateY(180deg);
-    margin-left: -6%;
-    border-radius: 8%;
-    
+    transform: rotateY(180deg);  
 }
 
 .wrap{
@@ -170,15 +167,15 @@ color: white;
 .card_header{
     background-color: black;
     color: white;
-    margin-left: -12%;
-    width: 104%;
+    margin-left: -6%;
+    width: 109%;
 } 
 
 .card_body{
     background-color: black;
     color: white;
     position: absolute;
-    margin-left: -4%;
+    margin-left: 1%;
     width: 91%;
 }
 
@@ -200,28 +197,28 @@ color: white;
 @media (max-width: 600px){
 
 .navbar{
-    width: 292%;
+    width: 300%;
     height: 10%;
 }
 
 .title{
     position: absolute;
     margin-top: 2%;
-    margin-left: 85%;
-    width: 150%;
+    margin-left: 95%;
+    width: 170%;
 }
 
 .logo{
     position: absolute;
-    height: 10%;
-    width: 30%;
-    margin-left: 20%;
+    height: 15%;
+    width: 40%;
+    margin-left: 25%;
     margin-top: -2%;
 }
 
 .loin{
     position: absolute;
-    height: 10%;
+    height: 15%;
     width: 30%;
     margin-left: 250%;
     margin-top: -2%;
@@ -234,7 +231,7 @@ color: white;
 
 .mySlides{
     position: relative;
-    width: 275%;
+    width: 284%;
     margin-top: 1%;
     height: 120%;
 }
@@ -242,24 +239,24 @@ color: white;
 .schedule{
     position: relative;
     margin-top: 30%;
-    margin-left: 90%;
+    margin-left: 100%;
 }
 
 .date{
     margin-top: 2%;
-    margin-left: 90%;
+    margin-left: 100%;
     height: 30%;
     width: 100%;
 }
 
 .time{
     position: absolute;
-    margin-top: 7%;
-    margin-left: 135%;
+    margin-top: 8%;
+    margin-left: 143%;
 }
 
 .marquee1{
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 .head{
@@ -276,7 +273,7 @@ color: white;
 .calender{
     position: absolute;
     margin-top: -15%;
-    margin-left: 200%;
+    margin-left: 155%;
 }
 
 .input_date{
@@ -287,8 +284,8 @@ color: white;
 
 .btn{
     position: absolute;
-    margin-left: 165%;
-    margin-top: 45%;
+    margin-left: 135%;
+    margin-top: 35%;
     width: 40%;
 }
 
@@ -296,6 +293,7 @@ color: white;
     position: absolute;
     margin-top: 50%;
     width: 140%;
+    margin-left: 80%;
 }
 
 .img{
@@ -308,21 +306,15 @@ color: white;
 
 .wrap{
     margin-top: 105%;
-    height: 133px;
-    width: 105px;
-    margin-left: 18%;
 }
 
-.card_header{
-    margin-left: -36%;
-    width: 104%;
-} 
-
-.card_body{
-    position: absolute;
-    margin-left: -25%;
-    width: 91%;
+.side_a,
+.side_b{
+    height: 213px;
+    width: 300px;
 }
 
-
+.para{
+    margin-top: 120%;
+}
 }
