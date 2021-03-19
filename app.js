@@ -38,12 +38,16 @@ document.getElementById('btn').addEventListener('click', () => {
       return response.json()
     })
     .then((data) => {
-      let n = no_of_station = data.TrainRoute.length
       container.innerHTML = ''
+      console.log(data)
+      if(data.TrainRoute!=null){
+        console.log('data is true')
+      let n = no_of_station = data.TrainRoute.length
+     
       for (let i = 0; i < n; i++) {
         container= document.getElementById('container')
         container.innerHTML +=
-          `<div class="wrap text-center col-sm-3">
+          `<div class="wrap text-center">
       <div class="side_a">
          <div class="card-header">
            <h2 class="card_header">${data.TrainRoute[i].SerialNo}</h2>
@@ -64,10 +68,17 @@ document.getElementById('btn').addEventListener('click', () => {
           </ul>
         </div>
       </div>
-    </div> `
-        // <p class="arrow" style="color: white;"><b>--></b></p>`
+    </div>`
+    // <p class="arrow" style="color: white;"><b>--></b></p>
       }
+    }
+    else{
+      console.log('data is false')
+      container.innerHTML += `<div class="wrap text-center col-sm-3">
+      <h3>${data.Message.slice(0,28)}, either the Train Number or Date is invalid.'</h3>`
+    }
     })
     .catch()
+  
 })
 
