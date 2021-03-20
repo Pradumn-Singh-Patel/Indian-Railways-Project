@@ -69,7 +69,7 @@ document.getElementById('btn').addEventListener('click', () => {
         </div>
       </div>
     </div>`
-    // <p class="arrow" style="color: white;"><b>--></b></p>
+    // <p class="arrow" style="color: white;"><b>--></b></p>`
       }
     }
     else{
